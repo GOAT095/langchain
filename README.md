@@ -1,5 +1,7 @@
 # langchain
 langchain research
+
+https://www.geeksforgeeks.org/how-to-use-chatgpt-api-in-python/
 https://docs.langchain.com/docs/ 
 https://docs.langchain.com/docs/use-cases/chatbots
 https://docs.langchain.com/docs/use-cases/qa-docs
