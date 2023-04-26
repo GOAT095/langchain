@@ -39,7 +39,7 @@ def count_tokens(chain, query):
 
 count_tokens(
     conversation_buf, 
-    "My interest here is to explore the potential of integrating AI to a companie"
+    "My interest here is to explore the potential of integrating AI to a company"
 )
 
 count_tokens(
