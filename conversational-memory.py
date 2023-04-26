@@ -1,5 +1,7 @@
 from langchain import OpenAI
 from langchain.chains import ConversationChain
+from langchain.chains.conversation.memory import ConversationBufferMemory
+from langchain.callbacks import get_openai_callback
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -15,4 +17,23 @@ conversation = ConversationChain(llm=llm)
 
 #print of the conversation chain just to see it...
 print(conversation.prompt.template)
+
+#the raw input of the past conversation between the human and AI is passed
+conversation_buf = ConversationChain(
+    llm=llm,
+    memory=ConversationBufferMemory()
+)
+
+# #buffer fed to the history
+# conversation_buf("Good morning AI!") #can change this this with input later
+
+
+#token counter
+
+def count_tokens(chain, query):
+    with get_openai_callback() as cb:
+        result = chain.run(query)
+        print(f'Spent a total of {cb.total_tokens} tokens')
+
+    return result
 
