@@ -28,7 +28,7 @@ conversation_buf = ConversationChain(
 # conversation_buf("Good morning AI!") #can change this this with input later
 
 
-#token counter
+#token counter 
 
 def count_tokens(chain, query):
     with get_openai_callback() as cb:
@@ -37,3 +37,25 @@ def count_tokens(chain, query):
 
     return result
 
+count_tokens(
+    conversation_buf, 
+    "My interest here is to explore the potential of integrating AI to a companie"
+)
+
+count_tokens(
+    conversation_buf, 
+    "I just want to analyze the different possibilities. What can you think of?"
+)
+
+count_tokens(
+    conversation_buf, 
+    "can you explain further please"
+)
+
+count_tokens(
+    conversation_buf, 
+    "What is my aim again?"
+)
+
+#print of the whole history buffer stored
+print(conversation_buf.memory.buffer)
