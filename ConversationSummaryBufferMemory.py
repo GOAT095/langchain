@@ -39,26 +39,26 @@ def count_tokens(chain, query):
 
 
 count_tokens(
-    conversation_sum, 
+    conversation_sum_bufw, 
     "My interest here is to explore the potential of integrating AI to a company"
 )
 
 count_tokens(
-    conversation_sum, 
+    conversation_sum_bufw, 
     "I just want to analyze the different possibilities. What can you think of?"
 )
 
 count_tokens(
-    conversation_sum, 
+    conversation_sum_bufw, 
     "can you explain further please"
 )
 
 count_tokens(
-    conversation_sum, 
+    conversation_sum_bufw, 
     "What is my aim again?"
 )
 #print the summarized convo 
-print(conversation_sum.memory.buffer)
+print(conversation_sum_bufw.memory.buffer)
 
 #pros:
 #-Enables much longer conversations
