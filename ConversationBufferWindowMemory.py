@@ -62,3 +62,4 @@ print(bufw_history = conversation_bufw.memory.load_memory_variables(
 
 #cons:
 #-Storing the raw interactions — even if just the most recent interactions — increases token count
+#-cant remember old interactions (depending on how much K is set to)
