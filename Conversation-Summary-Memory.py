@@ -22,7 +22,7 @@ print(conversation.prompt.template)
 #the raw input of the past conversation between the human and AI is passed
 conversation_sum = ConversationChain(
     llm=llm,
-    memory=ConversationSummaryMemory()
+    memory=ConversationSummaryMemory(llm=llm)
 )
 
 # #to see that the summarization is powered by an LLM
