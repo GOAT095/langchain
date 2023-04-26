@@ -59,3 +59,12 @@ count_tokens(
 
 #print of the whole history buffer stored
 print(conversation_buf.memory.buffer)
+
+#pros:
+
+    #- maximum amount of information
+    #-simple and intuitive
+
+#cons:
+    #-higher costs
+    #Long conversations cannot be remembered as we hit the LLM token limit (4096 tokens for text-davinci-003 and gpt-3.5-turbo)
