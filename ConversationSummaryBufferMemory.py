@@ -1,11 +1,11 @@
 from langchain import OpenAI
 from langchain.chains import ConversationChain
-from langchain.chains.conversation.memory import ConversationSummaryMemory
 from langchain.callbacks import get_openai_callback
-
+from langchain.chains.conversation.memory import ConversationSummaryBufferMemory
 import os
 from dotenv import load_dotenv
 load_dotenv()
+
 
 # initialization of the large language model in this case openai lm
 llm = OpenAI(
@@ -20,9 +20,11 @@ conversation = ConversationChain(llm=llm)
 print(conversation.prompt.template)
 
 #the raw input of the past conversation between the human and AI is passed
-conversation_sum = ConversationChain(
+conversation_sum_bufw = ConversationChain(
     llm=llm,
-    memory=ConversationSummaryMemory(llm=llm)
+    memory=ConversationSummaryBufferMemory(
+        llm=llm,
+        max_token_limit=650)
 )
 
 # #to see that the summarization is powered by an LLM
@@ -58,4 +60,10 @@ count_tokens(
 #print the summarized convo 
 print(conversation_sum.memory.buffer)
 
+#pros:
+#-Enables much longer conversations
+#-shortens the number of tokens used
 
+#cons:
+#-must have a very good LLM to get the best results
+#-requires token usage for the summarization LLM; this increases costs (but does not limit conversation length)
