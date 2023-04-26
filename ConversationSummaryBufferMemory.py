@@ -61,9 +61,9 @@ count_tokens(
 print(conversation_sum_bufw.memory.buffer)
 
 #pros:
-#-Enables much longer conversations
-#-shortens the number of tokens used
+#-Summarizer means we can remember distant interactions
+#-Buffer prevents us from missing information from the most recent interactions
 
 #cons:
-#-must have a very good LLM to get the best results
-#-requires token usage for the summarization LLM; this increases costs (but does not limit conversation length)
+#-Summarizer increases token count for shorter conversations
+#-Storing the raw interactions — even if just the most recent interactions — increases token count
