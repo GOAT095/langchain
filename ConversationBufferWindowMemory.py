@@ -18,7 +18,7 @@ llm = OpenAI(
 #the raw input of the past conversation between the human and AI is passed
 conversation_bufw = ConversationChain(
     llm=llm,
-    memory=ConversationBufferWindowMemory(k=1)
+    memory=ConversationBufferWindowMemory(k=1) #buffer to keep in memory (last prompt)
 )
 
 # #to see that the summarization is powered by an LLM
@@ -51,7 +51,7 @@ count_tokens(
     conversation_bufw, 
     "What is my aim again?"
 )
-#print the summarized convo 
+#prints the last interaction only !
 print(bufw_history = conversation_bufw.memory.load_memory_variables(
     inputs=[]
 )['history'])
