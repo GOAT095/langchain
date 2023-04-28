@@ -34,5 +34,5 @@ def qNa(vectorIndex):
         response = vIndex.query(prompt, response_mode="compact")
         print(f"Response: {response} \n")
 
-vectorIndex = createVectoreIndexx('source')
+vectorIndex = createVectoreIndexx('../source')
 qNa('vectorIndex.json')
