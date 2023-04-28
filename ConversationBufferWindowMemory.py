@@ -23,7 +23,7 @@ conversation_bufw = ConversationChain(
 
 # #to see that the summarization is powered by an LLM
 # print(conversation_sum.memory.prompt.template)
-
+#token counter (result is what matters counter is just for exprimenting)
 def count_tokens(chain, query):
     with get_openai_callback() as cb:
         result = chain.run(query)

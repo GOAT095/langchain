@@ -28,7 +28,7 @@ conversation_buf = ConversationChain(
 # conversation_buf("Good morning AI!") #can change this this with input later
 
 
-#token counter 
+#token counter (result is what matters counter is just for exprimenting)
 
 def count_tokens(chain, query):
     with get_openai_callback() as cb:
