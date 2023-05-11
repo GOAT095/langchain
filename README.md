@@ -14,3 +14,5 @@ https://python.langchain.com/en/latest/modules/memory/types/buffer_window.html
 https://python.langchain.com/en/latest/modules/memory/types/entity_summary_memory.html
 https://python.langchain.com/en/latest/modules/memory/types/summary.html
 https://python.langchain.com/en/latest/modules/memory/types/summary_buffer.html
+
+https://github.com/hwchase17/langchain
