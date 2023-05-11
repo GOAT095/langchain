@@ -1,4 +1,4 @@
-import openai
+
 from gpt_index import PromptHelper, SimpleDirectoryReader, GPTSimpleVectorIndex, LLMPredictor, ServiceContext
 
 from langchain import OpenAI
