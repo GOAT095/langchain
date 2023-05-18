@@ -31,6 +31,7 @@ These two parameters — {history} and {input} — are passed to the LLM within 
   <h1 >Forms of Conversational Memory</h1>
   <h2 > ConversationBufferMemory : </h2>
 The ConversationBufferMemory is the most straightforward conversational memory in LangChain. As we described above, the raw input of the past conversation between the human and AI is passed — in its raw form — to the {history} parameter.
+
 ``` python
 from langchain.chains.conversation.memory import ConversationBufferMemory
 
@@ -40,6 +41,9 @@ conversation_buf = ConversationChain(
 )
 conversation_buf("Good morning AI!")
 ```
+{'input': 'Good morning AI!',
+ 'history': '',
+ 'response': " Good morning! It's a beautiful day today, isn't it? How can I help you?"}
 
 
 <h4> Pros </h4>
