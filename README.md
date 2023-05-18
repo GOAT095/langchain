@@ -78,6 +78,26 @@ conversation = ConversationChain(
 ```
 
 
+<h4> Pros </h4>
+<ul>
+<li>
+	Shortens the number of tokens for long conversations.	
+</li>
+	<li>
+		Enables much longer conversations.
+	</li>
+</ul>
+<h4> cons </h4>
+<ul>
+	<li>
+		Memorization of the conversation history is wholly reliant on the summarization ability of the intermediate summarization LLM.
+	</li>
+	<li>
+	Can result in higher token usage for smaller conversations.
+
+	</li>
+
+</ul>
 
 
 
