@@ -28,9 +28,9 @@ conversation = ConversationChain(llm=llm)
 ```
 These two parameters — {history} and {input} — are passed to the LLM within the prompt template, and the output that we (hopefully) return is simply the predicted continuation of the conversation.
 
-  <h1 style="color:purple;">Forms of Conversational Memory</h1>
-  <h2 style="color:green"> ConversationBufferMemory </h2>
-
+  <h1 >Forms of Conversational Memory</h1>
+  <h2 > ConversationBufferMemory : </h2>
+The ConversationBufferMemory is the most straightforward conversational memory in LangChain. As we described above, the raw input of the past conversation between the human and AI is passed — in its raw form — to the {history} parameter.
 
 https://www.geeksforgeeks.org/how-to-use-chatgpt-api-in-python/
 https://docs.langchain.com/docs/
