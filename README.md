@@ -40,6 +40,16 @@ The ConversationBufferMemory is the most straightforward conversational memory i
 		Storing everything is simple and intuitive
 	</li>
 </ul>
+<h4> cons </h4>
+<ul>
+	<li>
+		More tokens mean slowing response times and higher costs
+	</li>
+	<li>
+		Long conversations cannot be remembered as we hit the LLM token limit (4096 tokens for text-davinci-003 and gpt-3.5-turbo)
+
+	</li>
+</ul>
 
 
 
