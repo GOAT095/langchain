@@ -31,6 +31,17 @@ These two parameters — {history} and {input} — are passed to the LLM within 
   <h1 >Forms of Conversational Memory</h1>
   <h2 > ConversationBufferMemory : </h2>
 The ConversationBufferMemory is the most straightforward conversational memory in LangChain. As we described above, the raw input of the past conversation between the human and AI is passed — in its raw form — to the {history} parameter.
+``` python
+from langchain.chains.conversation.memory import ConversationBufferMemory
+
+conversation_buf = ConversationChain(
+    llm=llm,
+    memory=ConversationBufferMemory()
+)
+conversation_buf("Good morning AI!")
+```
+
+
 <h4> Pros </h4>
 <ul>
 <li>
@@ -46,12 +57,11 @@ The ConversationBufferMemory is the most straightforward conversational memory i
 		More tokens mean slowing response times and higher costs
 	</li>
 	<li>
-		Long conversations cannot be remembered as we hit the LLM token limit (4096 tokens for text-davinci-003 and gpt-3.5-turbo)
+		Long conversations cannot be remembered as we hit the LLM token limit (4096 tokens for text-davinci-003 and gpt-3.5-turbo)</li>
 
 </ul>
-
-
-
+<h2 > ConversationBufferMemory : </h2>
+o avoid excessive token usage, we can use ConversationSummaryMemory. As the name would suggest, this form of memory summarizes the conversation history before it is passed to the {history} parameter.
 
 
 
