@@ -34,7 +34,11 @@ The ConversationBufferMemory is the most straightforward conversational memory i
 <h4> Pros </h4>
 <ul>
 <li>
+	Storing everything gives the LLM the maximum amount of information
 </li>
+	<li>
+		Storing everything is simple and intuitive
+	</li>
 </ul>
 
 
