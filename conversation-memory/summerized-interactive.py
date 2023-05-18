@@ -38,7 +38,7 @@ def count_tokens(chain, query):
 def qNa():
     while True:
         query = input('Please ask your question here: ')
-        print(count_tokens(conversation_buf, query))
+        print(count_tokens(conversation_sum, query))
 
 
 def main():
