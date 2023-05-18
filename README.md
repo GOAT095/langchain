@@ -26,7 +26,9 @@ llm = OpenAI(
 conversation = ConversationChain(llm=llm)
 
 ```
+These two parameters — {history} and {input} — are passed to the LLM within the prompt template, and the output that we (hopefully) return is simply the predicted continuation of the conversation.
 
+  <h1 style="color:purple;">Hello World</h1>
 
 
 https://www.geeksforgeeks.org/how-to-use-chatgpt-api-in-python/
