@@ -31,6 +31,26 @@ These two parameters — {history} and {input} — are passed to the LLM within 
   <h1 >Forms of Conversational Memory</h1>
   <h2 > ConversationBufferMemory : </h2>
 The ConversationBufferMemory is the most straightforward conversational memory in LangChain. As we described above, the raw input of the past conversation between the human and AI is passed — in its raw form — to the {history} parameter.
+<h4> Pros </h4>
+<ul>
+<li>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 https://www.geeksforgeeks.org/how-to-use-chatgpt-api-in-python/
 https://docs.langchain.com/docs/
