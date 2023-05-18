@@ -64,8 +64,18 @@ conversation_buf("Good morning AI!")
 		Long conversations cannot be remembered as we hit the LLM token limit (4096 tokens for text-davinci-003 and gpt-3.5-turbo)</li>
 
 </ul>
-<h2 > ConversationBufferMemory : </h2>
-o avoid excessive token usage, we can use ConversationSummaryMemory. As the name would suggest, this form of memory summarizes the conversation history before it is passed to the {history} parameter.
+<h2 > ConversationSummaryMemory : </h2>
+to avoid excessive token usage, we can use ConversationSummaryMemory. As the name would suggest, this form of memory summarizes the conversation history before it is passed to the {history} parameter.
+
+We initialize the ConversationChain with the summary memory like so:
+``` python
+from langchain.chains.conversation.memory import ConversationSummaryMemory
+
+conversation = ConversationChain(
+	llm=llm,
+	memory=ConversationSummaryMemory(llm=llm)
+)
+```
 
 
 
