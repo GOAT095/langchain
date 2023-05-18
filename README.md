@@ -93,9 +93,7 @@ conversation = ConversationChain(
 		Memorization of the conversation history is wholly reliant on the summarization ability of the intermediate summarization LLM.
 	</li>
 	<li>
-	Can result in higher token usage for smaller conversations.
-
-	</li>
+	Can result in higher token usage for smaller conversations.</li>
 
 </ul>
 
